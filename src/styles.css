@@ -1,1 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
+.portbg {
+    background-image: url("assets/img/back.png");
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+   }
+
+.green {
+ background-color: #2470a359;
+
+}
+
+.bodybg {
+    background-color: #283747; 
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: repeat;
+   }
+
+.imgsize {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.imgsizemd {
+    max-width: 300%;
+    height: auto;
+}
+
+.skillsize {
+    width: 15%;
+}
+
