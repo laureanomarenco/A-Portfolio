@@ -32,3 +32,6 @@
     width: 15%;
 }
 
+.text-wrap {
+    overflow-wrap: break-word;
+}

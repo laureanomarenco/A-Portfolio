@@ -1,27 +1,16 @@
-<div class="container-lg my-5 ml-2 mr-2 green rounded-2">
+<div class="mx-2 pb-2 green rounded-2">
     <h2 class="text-white text-left py-2 my-2 mx-4">Educación</h2>
-
-    <!-- secundaria -->
-    <div class="container-fluid">
+    <div class="container-fluid" *ngFor="let education of educationList">
       <div class="col-1 float-start mx-4">
-        <img src="assets/img/eea.jpg" class="d-none d-xl-block d-xll-block rounded-2 imgsize" alt="Municipalidad de Rosario">
+        <img [src]="education.urlimg" class="d-none d-xl-block d-xll-block rounded-2 imgsize" alt="Municipalidad de Rosario">
        </div>
-      <div class="text-white col-11 mb-2 pb-4">Bachiller con Tecnicatura en Agronomía en la Escuela de Educación Agropecuaria Nº1 "Lorenzo Parodi".<br>
-        Conocimientos en gestión de proyectos agropecuarios y gestión en general.<br>
-        Trabajos agroepcuarios en general.
-        Finalizado en el año 2011<br>
-       <br>
+      <div class="text-white col-11 mb-2 pb-4">{{education.educationname}}<br>
+        {{education.description}}<br>
+        {{education.other1}}<br>
+        {{education.other2}}<br>
+
     </div>
 
-    <div class="col-1 float-start mx-4">
-      <img src="assets/img/unr.jpg" class="d-none d-xl-block d-xll-block rounded-2 imgsize" alt="Freelance">
-     </div>
-    <div class="text-white col-11 mb-2 pb-4">Licenciatura en Comunicación Social en la Universidad Nacional de Rosario.<br>
-      Diseño, ejecución y evaluación de estrategias de comunicación en medios e instituciones.<br>
-      Diseño y edición de piezas escritas, visuales, sonoras y multimediales.<br>
-      Finalizado en 2022. Título en trámite.<br>
-
-  </div>
     </div>
     </div>
   
