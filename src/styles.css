@@ -17,11 +17,21 @@
     background-repeat: repeat;
    }
 
-.imgsize {
-    max-width: 100%;
+.img-style-l {
+    max-width: 6em;
     height: auto;
+    float: left;
+    margin-right: 2em;
+    margin-left: 1em;
 }
 
+.img-style-r {
+    max-height: 9em;
+    width: auto;
+    float: right;
+    margin-right: 2em;
+    margin-left: 1em;
+}
 
 .imgsizemd {
     max-width: 300%;
@@ -34,4 +44,10 @@
 
 .text-wrap {
     overflow-wrap: break-word;
+}
+
+.edit-icon {
+    position: absolute;
+    color: white;
+    cursor: pointer;
 }
