@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +15,12 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProgsComponent } from './components/progs/progs.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { HobbiesComponent } from './components/hobbies/hobbies.component';
-import { HttpClientModule } from '@angular/common/http'
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
+import { Project1Component } from './components/projects/project1/project1.component';
+import { Project2Component } from './components/projects/project2/project2.component';
+import { Project3Component } from './components/projects/project3/project3.component';
+import { Hobbie1Component } from './components/hobbies/hobbie1/hobbie1.component';
 
 
 @NgModule({
@@ -27,11 +35,20 @@ import { HttpClientModule } from '@angular/common/http'
     ProgsComponent,
     ProjectsComponent,
     HobbiesComponent,
+    LoginComponent,
+    HomeComponent,
+    Project1Component,
+    Project2Component,
+    Project3Component,
+    Hobbie1Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
