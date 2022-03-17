@@ -1,0 +1,37 @@
+<h1 class="bg-dark text-white text-center mb-0 pb-4 pt-20">LogIn</h1>
+<form [formGroup]="form">
+<div class="bg-dark text-center">
+    <div>
+        <label for="email" class="text-white pr-2">Email<br></label>
+        <input type="email" class="form-control container" formControlName="email"
+        [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}">
+        <div *ngIf="Email?.errors && Email?.touched">
+            <p *ngIf="Email?.hasError('required')" class="text-danger">
+                Se requiere el Email
+            </p>
+            <p *ngIf="Email?.hasError('email')" class="text-danger">
+                El formato del email debe ser valido
+            </p>
+        </div>
+    </div>
+    <br>
+    <div>
+        <label for="exampleInputPassword" class="form-label text-white mr-2">Password<br></label>
+        <input type="password" class="form-control container" formControlName="password"
+        [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}">
+        <div *ngIf="Password?.errors && Password?.touched">
+            <p *ngIf="Password?.hasError('required')" class="text-danger">
+                Se requiere password
+            </p>
+            <p *ngIf="Password?.hasError('email')" class="text-danger">
+                La password debe tener al menos 8 caracteres
+            </p>
+        </div>
+    </div>
+    <br>
+    <div>
+        <button type="submit" class="btn-primary rounded">Iniciar Sesión</button>
+    </div>
+</div>
+</form>
+<div class="bg-dark container-fluid"><br><br><br><br><br><br><br><br><br>-</div>
