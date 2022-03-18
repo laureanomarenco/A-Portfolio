@@ -4,17 +4,17 @@
   </div>
     <h2 class="text-white text-left py-2 my-2 mx-4">Proyectos</h2>
 
-    <div class="container-fluid mb-2" *ngFor="let projects of projectsList">
+    <div class="container-fluid mb-2" *ngFor="let projects of projects">
       <div>
         <a class="navbar-brand col text-end" routerLink="{{projects.routerlink}}">
           <img [src]="projects.urlimg" class="img-style-r">
         </a>
       </div>
-      <h3 class="text-white text-left mx-4">{{projects.project}}</h3>
+      <h3 class="text-white text-left mx-4">{{projects.nameofproject}}</h3>
       <aside class="text-white mx-4">{{projects.description}}<br>
-        {{projects.other1}}<br>
-        {{projects.other2}}<br>
-        {{projects.date}}<br>
+        {{projects.others}}<br>
+        {{projects.others2}}<br>
+        {{projects.startandend}}<br>
       </aside>
        <br>
     </div>

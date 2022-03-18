@@ -21,12 +21,13 @@ public class projects {
     private String others2;
     private String startandend;
     private String urlimg;
+    private String routerlink;
     
     public projects() {
         
     }
 
-    public projects(Long idpr, String nameofproject, String description, String others, String others2, String startandend, String urlimg) {
+    public projects(Long idpr, String nameofproject, String description, String others, String others2, String startandend, String urlimg, String routerlink) {
         this.idpr = idpr;
         this.nameofproject = nameofproject;
         this.description = description;

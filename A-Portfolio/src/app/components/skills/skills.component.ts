@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { observable } from 'rxjs';
 import { DataPortfolioService } from 'src/app/services/data-portfolio.service';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import { SkillsService } from 'src/app/services/skills/skills.service';
+import { Skills } from 'src/app/services/skills/skills';
 
 @Component({
   selector: 'app-skills',
@@ -9,12 +11,14 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-  skillsList:any;
-  constructor(private datos:DataPortfolioService) { }
+  
+  skills : Skills[];
+
+  constructor(private skillsService:SkillsService) { }
 
   ngOnInit(): void {
-    this.datos.obtenerDatos().subscribe(data =>
-      this.skillsList=data.skills);
+    this.skillsService.get().subscribe((sk : Skills[]) =>
+      this.skills=sk);
    }
    faEdit = faEdit;
 } 

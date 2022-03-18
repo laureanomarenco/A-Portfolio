@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { DataPortfolioService } from 'src/app/services/data-portfolio.service';
+import { Hobbies } from 'src/app/services/hobbies/hobbies';
+import { HobbiesService } from 'src/app/services/hobbies/hobbies.service';
 
 @Component({
   selector: 'app-hobbies',
@@ -8,12 +10,14 @@ import { DataPortfolioService } from 'src/app/services/data-portfolio.service';
   styleUrls: ['./hobbies.component.css']
 })
 export class HobbiesComponent implements OnInit {
-  hobbiesList:any;
-  constructor(private datos:DataPortfolioService) { }
+
+  hobbies : Hobbies[];
+
+  constructor(private hobbiesService:HobbiesService) { }
 
   ngOnInit(): void {
-    this.datos.obtenerDatos().subscribe(data =>
-      this.hobbiesList=data.hobbies);
+    this.hobbiesService.get().subscribe((hb : Hobbies[]) =>
+      this.hobbies=hb);
    }
    faEdit = faEdit;
 } 

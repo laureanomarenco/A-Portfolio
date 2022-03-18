@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { observable } from 'rxjs';
 import { DataPortfolioService } from 'src/app/services/data-portfolio.service';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import { Person } from 'src/app/services/person/person';
+import { PersonService } from 'src/app/services/person/person.service';
 
 @Component({
   selector: 'app-port',
@@ -9,12 +11,14 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./port.component.css']
 })
 export class PortComponent implements OnInit {
-  myPortfolio:any;
-  constructor(private datos:DataPortfolioService) { }
+
+  person:Person[];
+
+  constructor(private personService:PersonService) {}
 
   ngOnInit(): void {
-    this.datos.obtenerDatos().subscribe(data =>
-      this.myPortfolio=data);
+    this.personService.get().subscribe((pers: Person[]) =>
+      this.person=pers);
   }
   faEdit = faEdit;
 }

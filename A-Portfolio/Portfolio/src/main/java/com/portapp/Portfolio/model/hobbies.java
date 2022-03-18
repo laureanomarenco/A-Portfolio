@@ -21,12 +21,13 @@ public class hobbies {
     private String others2;
     private String startandend;
     private String imgurl;
+    private String routerlink;
     
     public hobbies() {
         
     }
 
-    public hobbies(Long idhb, String nameohobbie, String description, String others, String others2, String startandend, String imgurl) {
+    public hobbies(Long idhb, String nameohobbie, String description, String others, String others2, String startandend, String imgurl, String routerlink) {
         this.idhb = idhb;
         this.nameohobbie = nameohobbie;
         this.description = description;
@@ -34,5 +35,6 @@ public class hobbies {
         this.others2 = others2;
         this.startandend = startandend;
         this.imgurl = imgurl;
+        this.routerlink = routerlink;
     }
 }

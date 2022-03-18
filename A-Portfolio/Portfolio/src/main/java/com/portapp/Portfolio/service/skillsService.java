@@ -1,6 +1,5 @@
 package com.portapp.Portfolio.service;
 
-import com.portapp.Portfolio.model.person;
 import com.portapp.Portfolio.model.skills;
 import com.portapp.Portfolio.repository.skillsRepository;
 import java.util.List;

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { observable } from 'rxjs';
-import { DataPortfolioService } from 'src/app/services/data-portfolio.service';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import { ExperienceService } from 'src/app/services/experience/experience.service';
+import { Experience } from 'src/app/services/experience/experience';
 
 @Component({
   selector: 'app-experience',
@@ -9,12 +10,16 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./experience.component.css']
 })
 export class ExperienceComponent implements OnInit {
-  experienceList:any;
-  constructor(private datos:DataPortfolioService) { }
+
+  experience: Experience[];
+
+  constructor(private experienceService:ExperienceService) { 
+
+  }
 
   ngOnInit(): void {
-    this.datos.obtenerDatos().subscribe(data =>
-      this.experienceList=data.experience);
+    this.experienceService.get().subscribe((exp: Experience[]) =>
+      this.experience=exp);
    }
    faEdit = faEdit;
 } 

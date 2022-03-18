@@ -21,6 +21,7 @@ import { Project1Component } from './components/projects/project1/project1.compo
 import { Project2Component } from './components/projects/project2/project2.component';
 import { Project3Component } from './components/projects/project3/project3.component';
 import { Hobbie1Component } from './components/hobbies/hobbie1/hobbie1.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { Hobbie1Component } from './components/hobbies/hobbie1/hobbie1.component
     Project2Component,
     Project3Component,
     Hobbie1Component,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

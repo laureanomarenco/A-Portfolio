@@ -3,14 +3,14 @@
     <fa-icon [icon]="faEdit" class="edit-icon"></fa-icon>
   </div>
     <h2 class="text-white text-left py-2 my-2 mx-4">Educación</h2>
-    <div class="container-fluid" *ngFor="let education of educationList">
+    <div class="container-fluid" *ngFor="let education of education">
       <div class="col-1 mx-4">
-        <img [src]="education.urlimg" class="rounded-2 img-style-l mb-2" alt="Municipalidad de Rosario">
+        <img [src]="education.imgurl" class="rounded-2 img-style-l mb-2" alt="Municipalidad de Rosario">
        </div>
-      <aside class="text-white mb-2 pb-4">{{education.educationname}}<br>
+      <aside class="text-white mb-2 pb-4">{{education.nameofed}}<br>
         {{education.description}}<br>
-        {{education.other1}}<br>
-        {{education.other2}}<br>
+        {{education.others}}<br>
+        {{education.startandend}}<br>
       </aside>
     </div>
 </div>

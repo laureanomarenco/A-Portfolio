@@ -4,10 +4,10 @@
   </div>
   <h2 class="text-white text-left py-2 my-2 mx-4">Programas y Lenguajes</h2>
   <div class="row row-cols-4 mx-2">
-    <div class="mb-3 pb-3 col" *ngFor="let progs of progsList">
+    <div class="mb-3 pb-3 col" *ngFor="let lenguajes of lenguajes">
       <div class="progress skillsize mx-2 col-1" style="height: 4rem; width: 80%;">
-        <div class="text-wrap progress-bar bg-primary" role="progressbar" [style]="progs.progress" aria-valuemin="0" aria-valuemax="100">
-        {{progs.prog}}</div>
+        <div class="text-wrap progress-bar bg-primary" role="progressbar" [style]="lenguajes.progress" aria-valuemin="0" aria-valuemax="100">
+        {{lenguajes.nameoflenguajes}}</div>
       </div>
    </div>
   </div>

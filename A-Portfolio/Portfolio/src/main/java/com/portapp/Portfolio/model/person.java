@@ -23,12 +23,13 @@ public class person{
     private String title2;
     private String location;
     private String about;
+    private String urlimg;
     
     public person() {
         
     }
 
-    public person(Long idperson, String name, String lastname, String title1, String title2, String location, String about) {
+    public person(Long idperson, String name, String lastname, String title1, String title2, String location, String about, String urlimg) {
         this.idperson = idperson;
         this.name = name;
         this.lastname = lastname;
@@ -36,6 +37,7 @@ public class person{
         this.title2 = title2;
         this.location = location;
         this.about = about;
+        this.urlimg = urlimg;
     }
     
     

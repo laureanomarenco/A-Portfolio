@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { DataPortfolioService } from 'src/app/services/data-portfolio.service';
+import { Projects } from 'src/app/services/projects/projects';
+import { ProjectsService } from 'src/app/services/projects/projects.service';
 
 @Component({
   selector: 'app-projects',
@@ -9,12 +11,14 @@ import { DataPortfolioService } from 'src/app/services/data-portfolio.service';
 })
 
 export class ProjectsComponent implements OnInit {
-  projectsList:any;
-  constructor(private datos:DataPortfolioService) { }
+
+  projects : Projects[];
+
+  constructor(private projectsService:ProjectsService) { }
 
   ngOnInit(): void {
-    this.datos.obtenerDatos().subscribe(data =>
-      this.projectsList=data.projects);
+    this.projectsService.get().subscribe((pj: Projects[]) =>
+      this.projects=pj);
    }
    faEdit = faEdit;
 } 

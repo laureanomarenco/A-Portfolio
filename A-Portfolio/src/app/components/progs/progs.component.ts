@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { observable } from 'rxjs';
 import { DataPortfolioService } from 'src/app/services/data-portfolio.service';
 import {faEdit}  from '@fortawesome/free-solid-svg-icons';
+import { Lenguajes } from 'src/app/services/lenguajes/lenguajes';
+import { LenguajesService } from 'src/app/services/lenguajes/lenguajes.service';
 
 @Component({
   selector: 'app-progs',
@@ -9,12 +11,14 @@ import {faEdit}  from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./progs.component.css']
 })
 export class ProgsComponent implements OnInit {
-  progsList:any;
-  constructor(private datos:DataPortfolioService) { }
+
+  lenguajes: Lenguajes[];
+
+  constructor(private lenguajesServices:LenguajesService) { }
 
   ngOnInit(): void {
-    this.datos.obtenerDatos().subscribe(data =>
-      this.progsList=data.progs);
+    this.lenguajesServices.get().subscribe((leng : Lenguajes[]) =>
+      this.lenguajes=leng);
    }
    faEdit = faEdit;
 } 

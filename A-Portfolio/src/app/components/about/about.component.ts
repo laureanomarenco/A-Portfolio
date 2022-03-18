@@ -5,6 +5,8 @@ import {  faEdit  }  from '@fortawesome/free-solid-svg-icons';
 import { FormControlDirective, NgModel } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { Person } from 'src/app/services/person/person';
+import { PersonService } from 'src/app/services/person/person.service';
 
 @Component({
   selector: 'app-about',
@@ -13,15 +15,15 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 
 export class AboutComponent implements OnInit {
-  myPortfolio:any;
   closeResult= ''
   faEdit = faEdit;
+  person:Person[];
 
-  constructor(private datos:DataPortfolioService, private modalService: NgbModal) { }
+  constructor(private personService:PersonService, private modalService: NgbModal) {}
 
   ngOnInit(): void {
-    this.datos.obtenerDatos().subscribe(data =>
-      this.myPortfolio=data);
+    this.personService.get().subscribe((pers: Person[]) =>
+      this.person=pers);
   }
 
   open(content:any) {

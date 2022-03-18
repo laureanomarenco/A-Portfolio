@@ -16,15 +16,19 @@ import com.portapp.Portfolio.service.IprojectsService;
 import com.portapp.Portfolio.service.IskillsService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping
 public class controller {
     
     @Autowired
@@ -140,7 +144,7 @@ public class controller {
     
     @DeleteMapping ("/deleteprojects/{idpr}")
     public void deleteprojects(@PathVariable Long idpr) {
-        lgServ.deletelenguajes(idpr);
+        prServ.deleteprojects(idpr);
     }  
     
     @Autowired
