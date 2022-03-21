@@ -1,12 +1,15 @@
-<div class="mx-2 green rounded-2 pb-10">
-  <div class=" d-flex flex-row-reverse mt-2">
+<div class="mx-2 green rounded-2 pb-10 mt-2">
+  <!--
+    <div class=" d-flex flex-row-reverse mt-2">
     <fa-icon [icon]="faEdit" class="edit-icon"></fa-icon>
   </div>
+  -->
+  
     <h2 class="text-white text-left py-2 my-2 mx-4">Hobbies</h2>
     <div class="container-fluid" *ngFor="let hobbies of hobbies">
     <div>
-      <a class="navbar-brand col text-end" routerLink="{{hobbies.routerlink}}">
-        <img [src]="hobbies.imgurl" class="img-style-r">
+      <a class="navbar-brand col text-end" [routerLink]="hobbies.routerlink">
+        <img [src]="hobbies.imgurl" class="img-style-h">
       </a>
     </div>
       <h3 class="text-white text-left mx-4">{{hobbies.nameofhobbie}}</h3>

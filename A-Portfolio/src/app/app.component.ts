@@ -10,4 +10,5 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
 export class AppComponent {
   title = 'A-Portfolio';
   faEdit = faEdit;
+
 }

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Project2Component implements OnInit {
 
+  pdfFilePath = "https://drive.google.com/file/d/1PGhp_QwtEDw3DoW7-4gopjSWbboqIdSc/view?usp=sharing"
+
   constructor() { }
 
   ngOnInit(): void {

@@ -2,16 +2,19 @@
     <div class="container my-lg-5 py-lg-5">
         <div class="row align-items-center g-3">
             <div class="col-lg-6 text-center text-lg-center">
-                <div class=" d-flex flex-row-reverse">
+              <!-- <div class=" d-flex flex-row-reverse">
                     <fa-icon [icon]="faEdit" class="edit-icon"></fa-icon>
                   </div>
+                  --> 
                 <h1 class="display-4 text-white animated slideInLeft mt-4">{{ person[0].name }}  {{person[0].lastname}} </h1>
                 <p class="text-white animated slideInLeft mb-4 pb-2">{{ person[0].title1 }}<br> {{ person[0].title2 }}</p>
               </div>
             <div class="col-lg-5 text-center text-lg-end mt-0">
+            <!--
                   <div class=" d-flex flex-row-reverse">
                     <fa-icon [icon]="faEdit" class="edit-icon"></fa-icon>
                     </div>
+                  -->
                 <img [src]="person[0].urlimg" class="rounded-circle w-50" alt="Laureano Marenco">
             </div>
         </div>

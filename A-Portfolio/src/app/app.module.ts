@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { Project2Component } from './components/projects/project2/project2.compo
 import { Project3Component } from './components/projects/project3/project3.component';
 import { Hobbie1Component } from './components/hobbies/hobbie1/hobbie1.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { Projects2Component } from './app/components/projects/projects2/projects2.component';
 
 
 @NgModule({
@@ -43,6 +45,8 @@ import { FooterComponent } from './components/footer/footer.component';
     Project3Component,
     Hobbie1Component,
     FooterComponent,
+    Projects2Component
+
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,8 @@ import { FooterComponent } from './components/footer/footer.component';
     HttpClientModule,
     FontAwesomeModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
