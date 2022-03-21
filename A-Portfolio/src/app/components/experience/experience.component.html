@@ -1,0 +1,18 @@
+<div class="mx-2 pb-2 green rounded-2">
+  <!--
+  <div class=" d-flex flex-row-reverse mt-2">
+    <fa-icon [icon]="faEdit" class="edit-icon"></fa-icon>
+  </div> 
+  -->
+  <h2 class="text-white text-left py-2 my-2 mx-4">Experiencia</h2>
+    <div class="container-fluid" *ngFor="let experience of experience">
+      <div class="col-1 mx-4">
+        <img [src]="experience.urlimg" class="rounded-2 img-style-l mb-2" alt="Municipalidad de Rosario">
+      </div>
+      <aside class="text-white mb-2 pb-4">{{experience.nameofjob}}<br>
+        {{experience.description}}<br>
+        {{experience.startandend}}<br>
+        <i>{{experience.others}}</i><br>
+      </aside>
+    </div>
+</div>

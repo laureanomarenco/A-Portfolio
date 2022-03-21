@@ -1,0 +1,77 @@
+.portbg {
+    background-image: url("assets/img/back.png");
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+   }
+
+.green {
+ background-color: #2470a359;
+
+}
+
+.bodybg {
+    background-color: #283747; 
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: repeat;
+   }
+
+.img-style-l {
+    max-width: 6em;
+    height: auto;
+    float: left;
+    margin-right: 2em;
+    margin-left: 1em;
+}
+
+.img-style-r {
+    max-height: 7em;
+    width: auto;
+    float: right;
+    margin-right: 2em;
+    margin-left: 1em;
+    margin-top: 2em;
+}
+
+.img-style-h {
+    max-height: 7em;
+    width: auto;
+    float: right;
+    margin-right: 2em;
+    margin-left: 1em;
+}
+
+.imgsizemd {
+    max-width: 300%;
+    height: auto;
+}
+
+.skillsize {
+    width: 15%;
+}
+
+.text-wrap {
+    overflow-wrap: break-word;
+}
+
+.edit-icon {
+    position: absolute;
+    color: white;
+    cursor: pointer;
+}
+
+pdf-viewer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(5px 5px 5px #222222);
+  }
+  
+textarea {
+      margin-top: 15px; 
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+  }

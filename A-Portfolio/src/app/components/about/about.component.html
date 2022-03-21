@@ -1,0 +1,34 @@
+<div class="mx-2 green rounded-2">
+  <!--
+  <div class=" d-flex flex-row-reverse">
+
+    <ng-template #content let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Update Acerca de mi:</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="dateOfBirth">Cambiar datos:</label>
+            <div class="input-group">
+              <input type="text" name="dp" ngbDatepicker [(ngModel)]="person[0].about">
+              <div class="input-group-append">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+      </div>
+    </ng-template>
+    
+    <fa-icon [icon]="faEdit" class="edit-icon" (click)="open(content)"></fa-icon>
+  </div>
+-->
+    <h2 class="text-white text-center my-2 py-2">Acerca de mi</h2>
+    <div class="text-white text-center pb-3">Resido en {{person[0].location}}. {{person[0].about}}</div>
+</div>
