@@ -9,7 +9,7 @@ import { Person } from './person';
 })
 export class PersonService {
 
-  private url:string="http://localhost:8080/viewperson";
+  private url:string="https://laureanomarencop.herokuapp.com/viewperson";
 
   constructor( private http:HttpClient ) { 
 

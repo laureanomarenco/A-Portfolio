@@ -7,7 +7,7 @@ import { Skills } from './skills';
 })
 export class SkillsService {
 
-  private url:string="http://localhost:8080/viewskills";
+  private url:string="https://laureanomarencop.herokuapp.com/viewskills";
 
   constructor( private http:HttpClient ) {
 

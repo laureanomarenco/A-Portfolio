@@ -7,7 +7,7 @@ import { Education } from './education';
 })
 export class EducationService {
 
-  private url:string="http://localhost:8080/vieweducation";
+  private url:string="https://laureanomarencop.herokuapp.com/vieweducation";
 
   constructor( private http:HttpClient ) { 
 

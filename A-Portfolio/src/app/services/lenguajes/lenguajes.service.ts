@@ -7,7 +7,7 @@ import { Skills } from '../skills/skills';
 })
 export class LenguajesService {
 
-  private url:string="http://localhost:8080/viewlenguajes";
+  private url:string="https://laureanomarencop.herokuapp.com/viewlenguajes";
 
   constructor( private http:HttpClient ) {
 

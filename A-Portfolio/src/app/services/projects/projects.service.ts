@@ -7,7 +7,7 @@ import { Projects } from './projects';
 })
 export class ProjectsService {
 
-  private url:string="http://localhost:8080/viewprojects";
+  private url:string="https://laureanomarencop.herokuapp.com/viewprojects";
 
   constructor( private http:HttpClient ) { 
 

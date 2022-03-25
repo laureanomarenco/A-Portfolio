@@ -7,7 +7,7 @@ import { Experience } from './experience';
 })
 export class ExperienceService {
 
-  private url:string="http://localhost:8080/viewexperience";
+  private url:string="https://laureanomarencop.herokuapp.com/viewexperience";
 
   constructor( private http:HttpClient ) { 
 
